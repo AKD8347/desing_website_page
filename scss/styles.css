@@ -11,8 +11,9 @@ body {
 
 a {
   text-decoration: none;
-
-  &:hover, &:focus, &:visited {
-    text-decoration: none;
-  }
 }
+a:hover, a:focus, a:visited {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
