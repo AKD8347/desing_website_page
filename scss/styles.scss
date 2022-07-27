@@ -154,7 +154,7 @@ $Yeseva: 'Yeseva One', cursive;
         width: 0;
         height: 1px;
         background-color: #E3B873;
-        bottom: 0;
+        bottom: 1px;
         transition: 0.4s all;
       }
 
@@ -189,6 +189,181 @@ $Yeseva: 'Yeseva One', cursive;
   }
 }
 /*-- Header close --*/
+/*-- Main banner--*/
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  background-color: #131313;
+
+  &__photo {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 707px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+    }
+  }
+
+  &__descr {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 1256px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 1256px) {
+      width: 1170px;
+    }
+
+    @media screen and (max-width: 1170px) {
+      width: 968px;
+    }
+
+    @media screen and (max-width: 786px) {
+      width: 750px;
+    }
+
+    @media screen and (max-width: 750px) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    width: 50%;
+    font-family: $Yeseva;
+    font-weight: 400;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 19px;
+
+    span {
+      color: #E3B873;
+    }
+
+    @media screen and (max-width: 1170px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 786px) {
+      font-size: 23px;
+    }
+  }
+
+  &__subtitle {
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-family: $Nunito;
+    font-weight: 400;
+    font-size: 22px;
+    color: #FFFFFF;
+
+    @media screen and (max-width: 1170px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 786px) {
+      font-size: 14px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 50%;
+
+    @media screen and (max-width: 1170px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 660px) {
+      flex-direction: column;
+    }
+
+    &-btn {
+      border-radius: 2px;
+      padding: 19px 41px;
+      margin-right: 20px;
+      font-family: $Nunito;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 11px;
+      text-align: center;
+      color: #FFFFFF;
+      cursor: pointer;
+      background-color: #E3B873;
+      border: 1px solid #E3B873;
+      box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
+      transition: 0.4s all;
+
+      @media screen and (max-width: 660px) {
+        width: 100%;
+        margin-bottom: 26px;
+      }
+
+      &:hover {
+        background-color: transparent;
+        border-color: #FFFFFF;
+        box-shadow: none;
+      }
+
+      &--transparent {
+        background-color: transparent;
+        border: 1px solid #FFFFFF;
+        box-shadow: none;
+
+        &:hover {
+          background-color: #E3B873;
+          border-color: #E3B873;
+          box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
+        }
+      }
+    }
+  }
+}
+/*-- Main banner close --*/
 /*-- Footer --*/
 .footer {
   display: flex;
@@ -199,6 +374,10 @@ $Yeseva: 'Yeseva One', cursive;
   padding-top: 24px;
   padding-bottom: 22px;
   background-color: #131313;
+
+  @media screen and (max-width: 660px) {
+    display: none;
+  }
 
   &__container {
     display: flex;
@@ -309,7 +488,7 @@ $Yeseva: 'Yeseva One', cursive;
         width: 0;
         height: 1px;
         background-color: #E3B873;
-        bottom: 0;
+        bottom: 1px;
         transition: 0.4s all;
       }
 
@@ -339,20 +518,6 @@ $Yeseva: 'Yeseva One', cursive;
 
       @media screen and (max-width: 520px) {
         display: none;
-      }
-    }
-
-    &-title {
-      width: 100%;
-      font-family: $Yeseva;
-      font-weight: 400;
-      font-size: 18px;
-      text-align: center;
-      text-transform: uppercase;
-      color: #E3B873;
-
-      a {
-        color: #E3B873;
       }
     }
   }
