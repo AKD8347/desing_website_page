@@ -188,6 +188,7 @@ $Yeseva: 'Yeseva One', cursive;
     }
   }
 }
+
 /*-- Header close --*/
 /*-- Main banner--*/
 .banner {
@@ -199,7 +200,7 @@ $Yeseva: 'Yeseva One', cursive;
   background-color: #131313;
 
   &__photo {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -220,7 +221,7 @@ $Yeseva: 'Yeseva One', cursive;
       content: '';
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.7);
+      background-color: rgba(0, 0, 0, 0.7);
     }
   }
 
@@ -363,6 +364,7 @@ $Yeseva: 'Yeseva One', cursive;
     }
   }
 }
+
 /*-- Main banner close --*/
 /*-- Tabs --*/
 .tabs {
@@ -377,19 +379,28 @@ $Yeseva: 'Yeseva One', cursive;
     margin-bottom: 36px;
   }
 
+  .banner__container {
+    align-items: flex-end;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-end;
-    width: 100%;
+    justify-content: flex-start;
+    width: 60%;
     position: relative;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 40px;
+    box-sizing: border-box;
 
     li {
       margin: 0 30px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
 
       a {
         display: block;
@@ -427,7 +438,156 @@ $Yeseva: 'Yeseva One', cursive;
       }
     }
   }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 52px 0;
+
+    &-descr {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 40%;
+      align-items: flex-start;
+    }
+
+    &-title {
+      margin-top: 0;
+      margin-bottom: 34px;
+      width: 100%;
+      font-family: $Yeseva;
+      font-weight: 400;
+      font-size: 27px;
+      text-transform: uppercase;
+      color: #E3B873;
+    }
+
+    &-subtitle {
+      margin-top: 0;
+      margin-bottom: 42px;
+      font-family: $Nunito;
+      font-weight: 400;
+      font-size: 14px;
+      color: #FFFFFF;
+    }
+
+    &-items {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 100%;
+    }
+
+    &-item {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 50%;
+      margin-bottom: 34px;
+
+      h3 {
+        margin: 0 0 9px;
+        font-family: $Yeseva;
+        font-weight: 400;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #E3B873;
+      }
+
+      p {
+        margin: 0;
+        font-family: $Nunito;
+        font-weight: 400;
+        font-size: 13px;
+        color: #FFFFFF;
+      }
+    }
+
+    &-dots {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin: 0 15px;
+
+        &:first-of-type {
+          margin-left: 0;
+
+          a {
+            display: block;
+            width: 42px;
+            height: 14px;
+            background-image: url('../images/icons/tab_arr_left_icon.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+            background-color: transparent;
+            border-radius: 0;
+          }
+        }
+
+        a {
+          display: block;
+          width: 10px;
+          height: 10px;
+          background-color: #fff;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+
+        &:last-of-type {
+
+          a {
+            display: block;
+            width: 42px;
+            height: 14px;
+            background-image: url('../images/icons/tab_arr_right_icon.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+            background-color: transparent;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+
+    &-slider {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 60%;
+      height: 482px;
+      align-items: flex-start;
+      padding-left: 40px;
+      box-sizing: border-box;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }
+
 /*-- Tabs close --*/
 /*-- Footer --*/
 .footer {
@@ -587,4 +747,5 @@ $Yeseva: 'Yeseva One', cursive;
     }
   }
 }
+
 /*-- Footer close --*/
