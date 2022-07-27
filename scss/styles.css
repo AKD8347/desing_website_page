@@ -16,4 +16,46 @@ a:hover, a:focus, a:visited {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: Nunito;
+  src: url("../fonts/nunito-sans.regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: Yeseva;
+  src: url("../fonts/yeseva-one.regular.ttf") format("ttf");
+}
+/*--Header--*/
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 22px;
+  background-color: #131313;
+}
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1170px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.header__logo {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #E3B873;
+}
+.header__logo:hover, .header__logo:active, .header__logo:focus {
+  color: #E3B873;
+}
+
 /*# sourceMappingURL=styles.css.map */
