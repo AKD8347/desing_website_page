@@ -364,6 +364,71 @@ $Yeseva: 'Yeseva One', cursive;
   }
 }
 /*-- Main banner close --*/
+/*-- Tabs --*/
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  background-color: #131313;
+  padding-top: 100px;
+
+  @media screen and (max-width: 660px) {
+    margin-bottom: 36px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 30px;
+
+      a {
+        display: block;
+        position: relative;
+        font-family: $Yeseva;
+        font-weight: 400;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+        transition: 0.4s all;
+
+        &:after {
+          display: block;
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 1px;
+          bottom: -6px;
+          background-color: #E3B873;
+          transition: 0.4s all;
+        }
+
+        &:hover {
+          color: #E3B873;
+
+          &:after {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 99%;
+            height: 1px;
+            background-color: #E3B873;
+          }
+        }
+      }
+    }
+  }
+}
+/*-- Tabs close --*/
 /*-- Footer --*/
 .footer {
   display: flex;
