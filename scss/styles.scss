@@ -209,6 +209,10 @@ $Yeseva: 'Yeseva One', cursive;
     height: 707px;
     overflow: hidden;
 
+    @media screen and (max-width: 660px) {
+      height: 476px;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -377,6 +381,7 @@ $Yeseva: 'Yeseva One', cursive;
 
   @media screen and (max-width: 660px) {
     margin-bottom: 36px;
+    padding-top: 36px;
   }
 
   .banner__container {
@@ -394,6 +399,10 @@ $Yeseva: 'Yeseva One', cursive;
     margin: 0;
     padding: 0 0 0 40px;
     box-sizing: border-box;
+
+    @media screen and (max-width: 660px) {
+      display: none;
+    }
 
     li {
       margin: 0 30px;
@@ -454,6 +463,12 @@ $Yeseva: 'Yeseva One', cursive;
       justify-content: space-between;
       width: 40%;
       align-items: flex-start;
+
+      @media screen and (max-width: 660px) {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     &-title {
@@ -465,6 +480,10 @@ $Yeseva: 'Yeseva One', cursive;
       font-size: 27px;
       text-transform: uppercase;
       color: #E3B873;
+
+      @media screen and (max-width: 660px) {
+        text-align: center;
+      }
     }
 
     &-subtitle {
@@ -474,6 +493,10 @@ $Yeseva: 'Yeseva One', cursive;
       font-weight: 400;
       font-size: 14px;
       color: #FFFFFF;
+
+      @media screen and (max-width: 660px) {
+        text-align: center;
+      }
     }
 
     &-items {
@@ -482,6 +505,10 @@ $Yeseva: 'Yeseva One', cursive;
       flex-direction: row;
       justify-content: flex-start;
       width: 100%;
+
+      @media screen and (max-width: 660px) {
+       display: none;
+      }
     }
 
     &-item {
@@ -520,6 +547,10 @@ $Yeseva: 'Yeseva One', cursive;
       margin: 0;
       padding: 0;
       list-style: none;
+
+      @media screen and (max-width: 660px) {
+        display: none;
+      }
 
       li {
         margin: 0 15px;
@@ -574,20 +605,70 @@ $Yeseva: 'Yeseva One', cursive;
       flex-direction: row;
       width: 60%;
       height: 482px;
-      align-items: flex-start;
+      align-items: center;
       padding-left: 40px;
       box-sizing: border-box;
       overflow: hidden;
+      position: relative;
 
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
+
+      @media screen and (max-width: 660px) {
+        width: 100%;
+        height: 242px;
+        padding: 0;
+      }
+    }
+
+    &-arrows {
+      display: none;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      position: absolute;
+      width: calc(100% - 40px);
+      height: 36px;
+      overflow: hidden;
+      box-sizing: border-box;
+
+      @media screen and (max-width: 660px) {
+        display: flex;
+        width: 100%;
+      }
+    }
+
+    &-arrow {
+      display: block;
+      position: relative;
+      float: left;
+      width: 36px;
+      height: 36px;
+      background-color: #E3B873;
+      border-radius: 50%;
+      overflow: hidden;
+
+      &--left {
+        margin-left: 14px;
+        background-image: url('../images/icons/arr_left_sm_icon.svg');
+        background-size: 7px 11px;
+        background-repeat: no-repeat;
+        background-position: 13px 12px;
+      }
+
+      &--right {
+        margin-right: 14px;
+        background-image: url('../images/icons/arr_right_sm_icon.svg');
+        background-size: 7px 11px;
+        background-repeat: no-repeat;
+        background-position: 13px 12px;
+      }
     }
   }
 }
-
 /*-- Tabs close --*/
 /*-- Footer --*/
 .footer {
