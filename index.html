@@ -128,21 +128,27 @@
 
         <form class="control__form">
             <div class="control__element">
-                <label for="name">Name</label>
-                <input id="name" type="text">
+                <label class="control__label" for="name">Name</label>
+                <input id="name" class="control__text" type="text" placeholder="What is your name:">
             </div>
             <div class="control__element">
-                <label for="name">Phone</label>
-                <input id="phone" type="text">
+                <label class="control__label" for="name">Phone</label>
+                <input id="phone" class="control__text" type="text" placeholder="Your phone number:">
             </div>
             <div class="control__element">
                 <button type="button" class="banner__form-btn">Submit</button>
             </div>
-            <div class="control__element">
-                <input id="personal" type="checkbox">
-                <label for="personal">I agree to the processing of personal data</label>
+            <div class="control__element control__element--checkboxes">
+                <input id="personal" class="control__checkbox" type="checkbox">
+                <label class="control__label--checkbox" for="personal">I agree to the processing of personal data</label>
             </div>
         </form>
+
+        <h3 class="tabs__video-title control__title--black">
+            TYPES OF REPAIR
+        </h3>
+        <span class="title-icon control__title--icon"></span>
+
     </div>
 </section>
 

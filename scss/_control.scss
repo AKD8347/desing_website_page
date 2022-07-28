@@ -31,14 +31,120 @@
     text-align: center;
     color: #363636;
 
+    &--black {
+      color: #181818;
+    }
+
+    &--icon {
+      background-image: url('../images/icons/tools_icon.svg');
+    }
   }
 
   &__form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: end;
     width: 100%;
     margin-top: 90px;
+    margin-bottom: 75px;
+  }
+
+  &__element {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: calc(30% - 30px);
+    margin: 0 15px 35px;
+
+    .banner__form-btn {
+      font-family: $Nunito;
+      font-weight: 400;
+      font-size: 13px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #FFFFFF;
+
+      &:hover {
+        color: #E3B873;
+        background-color: transparent;
+        border: 1px solid #E3B873;
+        box-shadow: none;
+      }
+    }
+
+    &--checkboxes {
+      width: 35%;
+    }
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-family: $Nunito;
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(54, 54, 54, 0.5);
+
+    &--checkbox {
+      display: block;
+      position: relative;
+      width: 100%;
+      font-family: $Nunito;
+      font-weight: 400;
+      font-size: 14px;
+      color: #181818;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: -28px;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #E3B873;
+        background-color: transparent;
+        transition: all 0.4s;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: -28px;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #E3B873;
+        background-color: #E3B873;
+        background-image: url('../images/icons/checked_icon.svg');
+        background-repeat: no-repeat;
+        -webkit-background-size: 13px 9px;
+        background-size: 13px 9px;
+        background-position: center center;
+        opacity: 0;
+        transition: all 0.4s;
+      }
+    }
+  }
+
+  &__text {
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  }
+
+  &__checkbox:checked, &__checkbox:not(:checked) {
+    display: none;
+  }
+
+  &__checkbox:checked + .control__label--checkbox:before {
+    background-color: #E3B873;
+  }
+
+  &__checkbox:checked + .control__label--checkbox:after {
+    opacity: 1;
   }
 }
