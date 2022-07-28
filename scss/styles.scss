@@ -72,6 +72,15 @@ $Yeseva: 'Yeseva One', cursive;
     background-color: #E3B873;
   }
 }
+
+.line {
+  display: block;
+  position: relative;
+  content: '';
+  width: 55px;
+  height: 2px;
+  background-color: #E3B873;
+}
 /*-- Control --*/
 @import "control";
 /*-- Control close*/
