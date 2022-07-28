@@ -1,0 +1,10 @@
+.control {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  background-color: #fff;
+  padding-top: calc(217px + 98px);
+  box-sizing: border-box;
+}

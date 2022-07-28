@@ -43,6 +43,35 @@ $Yeseva: 'Yeseva One', cursive;
 /*-- Tabs --*/
 @import "tabs";
 /*-- Tabs close --*/
+.title-icon {
+  display: block;
+  position: relative;
+  float: left;
+  width: 32px;
+  height: 32px;
+
+  &:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 32px;
+    height: 2px;
+    top: 16px;
+    left: -42px;
+    background-color: #E3B873;
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 32px;
+    height: 2px;
+    top: 16px;
+    right: -42px;
+    background-color: #E3B873;
+  }
+}
 /*-- Control --*/
 @import "control";
 /*-- Control close*/
