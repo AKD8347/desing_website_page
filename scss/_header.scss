@@ -1,0 +1,153 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 22px;
+  background-color: #131313;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1256px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 1256px) {
+      width: 1170px;
+    }
+
+    @media screen and (max-width: 1170px) {
+      width: 968px;
+    }
+
+    @media screen and (max-width: 786px) {
+      width: 750px;
+    }
+
+    @media screen and (max-width: 750px) {
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    font-family: $Nunito;
+    font-weight: 400;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #E3B873;
+
+    &:hover, &:active, &:focus {
+      color: #E3B873;
+    }
+
+    @media screen and (max-width: 1170px) {
+      margin: 15px 0;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    @media screen and (max-width: 868px) {
+      display: none;
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin: 0 22px;
+
+        @media screen and (max-width: 1170px) {
+          margin: 0 5px;
+        }
+
+        a {
+          font-family: $Nunito;
+          font-weight: 400;
+          font-size: 11px;
+          color: #FFFFFF;
+          transition: 0.4s all;
+
+          &:hover, &:active, &:focus {
+            color: #E3B873;
+          }
+        }
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-call {
+      display: block;
+      position: relative;
+      font-family: $Nunito;
+      font-weight: 400;
+      font-size: 11px;
+      text-align: right;
+      color: #E3B873;
+      margin-right: 22px;
+
+      &:after {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 1px;
+        background-color: #E3B873;
+        bottom: 1px;
+        transition: 0.4s all;
+      }
+
+      &:hover {
+
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+
+    &-req {
+      font-family: $Nunito;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 11px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background: #E3B873;
+      box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
+      border-radius: 2px;
+      border: none;
+      cursor: pointer;
+      padding: 13px 33px;
+      margin-left: 22px;
+
+      @media screen and (max-width: 520px) {
+        display: none;
+      }
+    }
+  }
+}
