@@ -12,35 +12,6 @@
     display: none;
   }
 
-  &__container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 1256px;
-    margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    box-sizing: border-box;
-
-    @media screen and (max-width: 1256px) {
-      width: 1170px;
-    }
-
-    @media screen and (max-width: 1170px) {
-      width: 968px;
-    }
-
-    @media screen and (max-width: 786px) {
-      width: 750px;
-    }
-
-    @media screen and (max-width: 750px) {
-      width: 100%;
-    }
-  }
-
   &__logo {
     font-family: $Nunito;
     font-weight: 400;
@@ -134,24 +105,8 @@
     }
 
     &-req {
-      font-family: $Nunito;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 11px;
-      text-align: center;
-      text-transform: uppercase;
-      color: #FFFFFF;
-      background: #E3B873;
-      box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
-      border-radius: 2px;
-      border: none;
-      cursor: pointer;
       padding: 13px 33px;
       margin-left: 22px;
-
-      @media screen and (max-width: 520px) {
-        display: none;
-      }
     }
   }
 }
