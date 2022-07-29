@@ -13,7 +13,8 @@
     padding-top: 36px;
   }
 
-  .banner__container {
+  .container {
+    justify-content: flex-end;
     align-items: flex-end;
 
     @media screen and (max-width: 660px) {

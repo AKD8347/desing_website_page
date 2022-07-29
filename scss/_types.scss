@@ -5,7 +5,6 @@
   justify-content: center;
   position: relative;
   background-color: #fff;
-  padding-top: calc(217px + 98px);
   box-sizing: border-box;
 
   @media screen and (max-width: 820px) {
@@ -18,8 +17,9 @@
     padding: 0;
   }
 
-  .banner__container {
+  .container {
     align-items: center;
+    flex-direction: column;
     padding-top: 83px;
   }
 

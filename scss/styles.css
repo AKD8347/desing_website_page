@@ -26,6 +26,124 @@ a:hover, a:focus, a:visited {
   font-family: Yeseva One;
   src: url("../fonts/YesevaOne-Regular.ttf") format("ttf");
 }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1256px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1256px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .container {
+    width: 968px;
+  }
+}
+@media screen and (max-width: 786px) {
+  .container {
+    width: 750px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.button {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 11px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #E3B873;
+  box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
+  border: 1px solid #E3B873;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 13px 33px;
+  transition: 0.4s all;
+}
+.button:hover {
+  color: #E3B873;
+  background-color: transparent;
+  border: 1px solid #E3B873;
+  box-shadow: none;
+}
+
+.section-title {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-text {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-family: "Yeseva One", cursive;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #181818;
+}
+.title-text--white {
+  color: #FFFFFF;
+}
+
+.title-icon {
+  display: block;
+  position: relative;
+  float: left;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 32px;
+}
+.title-icon:before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 2px;
+  top: 16px;
+  left: -42px;
+  background-color: #E3B873;
+}
+.title-icon:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 2px;
+  top: 16px;
+  right: -42px;
+  background-color: #E3B873;
+}
+
+.line {
+  display: block;
+  position: relative;
+  content: "";
+  width: 55px;
+  height: 2px;
+  background-color: #E3B873;
+}
+
 /*--Header--*/
 .header {
   display: flex;
@@ -151,24 +269,11 @@ a:hover, a:focus, a:visited {
 .header__form-call:hover:after {
   width: 100%;
 }
-.header__form-req {
-  font-family: "Nunito Sans", sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 11px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background: #E3B873;
-  box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
-  border-radius: 2px;
-  border: none;
-  cursor: pointer;
-  padding: 13px 33px;
+.header__form--req {
   margin-left: 22px;
 }
 @media screen and (max-width: 520px) {
-  .header__form-req {
+  .header__form--req {
     display: none;
   }
 }
@@ -222,38 +327,6 @@ a:hover, a:focus, a:visited {
   height: 100%;
   top: 0;
   left: 0;
-}
-.banner__container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 1256px;
-  margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  box-sizing: border-box;
-}
-@media screen and (max-width: 1256px) {
-  .banner__container {
-    width: 1170px;
-  }
-}
-@media screen and (max-width: 1170px) {
-  .banner__container {
-    width: 968px;
-  }
-}
-@media screen and (max-width: 786px) {
-  .banner__container {
-    width: 750px;
-  }
-}
-@media screen and (max-width: 750px) {
-  .banner__container {
-    width: 100%;
-  }
 }
 .banner__title {
   width: 50%;
@@ -314,42 +387,39 @@ a:hover, a:focus, a:visited {
     flex-direction: column;
   }
 }
-.banner__form-btn {
-  border-radius: 2px;
+.banner__form--btn {
   padding: 19px 41px;
   margin-right: 20px;
-  font-family: "Nunito Sans", sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 11px;
-  text-align: center;
-  color: #FFFFFF;
-  cursor: pointer;
-  background-color: #E3B873;
-  border: 1px solid #E3B873;
-  box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
-  transition: 0.4s all;
 }
 @media screen and (max-width: 660px) {
-  .banner__form-btn {
+  .banner__form--btn {
     width: 100%;
     margin-bottom: 26px;
   }
 }
-.banner__form-btn:hover {
+.banner__form--btn:hover {
+  color: #FFFFFF;
   background-color: transparent;
-  border-color: #FFFFFF;
-  box-shadow: none;
+  border: 1px solid #FFFFFF;
 }
-.banner__form-btn--transparent {
+.banner__form--transparent {
+  padding: 19px 41px;
+  color: #FFFFFF;
   background-color: transparent;
   border: 1px solid #FFFFFF;
   box-shadow: none;
 }
-.banner__form-btn--transparent:hover {
+.banner__form--transparent:hover {
+  color: #FFFFFF;
   background-color: #E3B873;
   border-color: #E3B873;
   box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
+}
+@media screen and (max-width: 660px) {
+  .banner__form--transparent {
+    width: 100%;
+    margin-bottom: 26px;
+  }
 }
 
 /*-- Main banner close --*/
@@ -370,11 +440,12 @@ a:hover, a:focus, a:visited {
     padding-top: 36px;
   }
 }
-.tabs .banner__container {
+.tabs .container {
+  justify-content: flex-end;
   align-items: flex-end;
 }
 @media screen and (max-width: 660px) {
-  .tabs .banner__container {
+  .tabs .container {
     padding: 0 18px;
     box-sizing: border-box;
   }
@@ -649,46 +720,6 @@ a:hover, a:focus, a:visited {
 }
 
 /*-- Tabs close --*/
-.title-icon {
-  display: block;
-  position: relative;
-  float: left;
-  width: 32px;
-  height: 32px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-bottom: 32px;
-}
-.title-icon:before {
-  display: block;
-  position: absolute;
-  content: "";
-  width: 32px;
-  height: 2px;
-  top: 16px;
-  left: -42px;
-  background-color: #E3B873;
-}
-.title-icon:after {
-  display: block;
-  position: absolute;
-  content: "";
-  width: 32px;
-  height: 2px;
-  top: 16px;
-  right: -42px;
-  background-color: #E3B873;
-}
-
-.line {
-  display: block;
-  position: relative;
-  content: "";
-  width: 55px;
-  height: 2px;
-  background-color: #E3B873;
-}
-
 /*-- Control --*/
 .control {
   display: flex;
@@ -712,10 +743,6 @@ a:hover, a:focus, a:visited {
     padding: 0;
   }
 }
-.control .banner__container {
-  align-items: center;
-  padding-top: 83px;
-}
 .control__video {
   display: flex;
   flex-wrap: wrap;
@@ -729,16 +756,6 @@ a:hover, a:focus, a:visited {
   .control__video {
     margin-top: 0;
   }
-}
-.control__video-title {
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-family: "Yeseva One", cursive;
-  font-weight: 400;
-  font-size: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
 }
 .control__video--icon {
   background-image: url("../images/icons/camera_icon.svg");
@@ -865,6 +882,26 @@ a:hover, a:focus, a:visited {
     margin-bottom: 30px;
   }
 }
+.control__form--btn {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.control__form--btn:hover {
+  color: #E3B873;
+  background-color: transparent;
+  border: 1px solid #E3B873;
+  box-shadow: none;
+}
+@media screen and (max-width: 660px) {
+  .control__form--btn {
+    margin-bottom: -57px;
+    z-index: 1;
+  }
+}
 .control__element {
   display: flex;
   flex-wrap: wrap;
@@ -883,26 +920,6 @@ a:hover, a:focus, a:visited {
   .control__element:nth-of-type(3) {
     order: 4;
     margin-bottom: 0;
-  }
-}
-.control__element .banner__form-btn {
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
-}
-.control__element .banner__form-btn:hover {
-  color: #E3B873;
-  background-color: transparent;
-  border: 1px solid #E3B873;
-  box-shadow: none;
-}
-@media screen and (max-width: 660px) {
-  .control__element .banner__form-btn {
-    margin-bottom: -57px;
-    z-index: 1;
   }
 }
 .control__element--checkboxes {
@@ -1014,7 +1031,6 @@ a:hover, a:focus, a:visited {
   justify-content: center;
   position: relative;
   background-color: #fff;
-  padding-top: 315px;
   box-sizing: border-box;
 }
 @media screen and (max-width: 820px) {
@@ -1029,8 +1045,9 @@ a:hover, a:focus, a:visited {
     padding: 0;
   }
 }
-.types .banner__container {
+.types .container {
   align-items: center;
+  flex-direction: column;
   padding-top: 83px;
 }
 .types__grid {

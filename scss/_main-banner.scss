@@ -49,35 +49,6 @@
     left: 0;
   }
 
-  &__container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 1256px;
-    margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    box-sizing: border-box;
-
-    @media screen and (max-width: 1256px) {
-      width: 1170px;
-    }
-
-    @media screen and (max-width: 1170px) {
-      width: 968px;
-    }
-
-    @media screen and (max-width: 786px) {
-      width: 750px;
-    }
-
-    @media screen and (max-width: 750px) {
-      width: 100%;
-    }
-  }
-
   &__title {
     width: 50%;
     font-family: $Yeseva;
@@ -134,21 +105,9 @@
       flex-direction: column;
     }
 
-    &-btn {
-      border-radius: 2px;
+    &--btn {
       padding: 19px 41px;
       margin-right: 20px;
-      font-family: $Nunito;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 11px;
-      text-align: center;
-      color: #FFFFFF;
-      cursor: pointer;
-      background-color: #E3B873;
-      border: 1px solid #E3B873;
-      box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
-      transition: 0.4s all;
 
       @media screen and (max-width: 660px) {
         width: 100%;
@@ -156,21 +115,29 @@
       }
 
       &:hover {
-        background-color: transparent;
-        border-color: #FFFFFF;
-        box-shadow: none;
-      }
-
-      &--transparent {
+        color: #FFFFFF;
         background-color: transparent;
         border: 1px solid #FFFFFF;
-        box-shadow: none;
+      }
+    }
 
-        &:hover {
-          background-color: #E3B873;
-          border-color: #E3B873;
-          box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
-        }
+    &--transparent {
+      padding: 19px 41px;
+      color: #FFFFFF;
+      background-color: transparent;
+      border: 1px solid #FFFFFF;
+      box-shadow: none;
+
+      &:hover {
+        color: #FFFFFF;
+        background-color: #E3B873;
+        border-color: #E3B873;
+        box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
+      }
+
+      @media screen and (max-width: 660px) {
+        width: 100%;
+        margin-bottom: 26px;
       }
     }
   }
