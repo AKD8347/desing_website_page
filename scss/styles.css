@@ -1161,7 +1161,7 @@ a:hover, a:focus, a:visited {
   justify-content: space-between;
   width: 100%;
   position: relative;
-  padding-top: 230px;
+  padding-top: 54px;
   padding-bottom: 102px;
   box-sizing: border-box;
 }
@@ -1261,6 +1261,7 @@ a:hover, a:focus, a:visited {
   height: 509px;
   padding: 28px 49px;
   box-sizing: border-box;
+  margin-top: 91px;
   background: #131313;
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
 }
@@ -1363,6 +1364,41 @@ a:hover, a:focus, a:visited {
 }
 .request__checkbox:checked + .request__label--checkbox:after {
   opacity: 1;
+}
+.request__discount {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 509px;
+  margin-top: 38px;
+}
+.request__discount-icon {
+  display: block;
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #E3B873;
+  box-shadow: 0 10px 20px rgba(237, 192, 120, 0.2);
+  background-image: url("../images/icons/bank_icon.svg");
+  background-repeat: no-repeat;
+  -webkit-background-size: 40px 34px;
+  background-size: 40px 34px;
+  background-position: center center;
+}
+.request__discount-about {
+  margin: 0;
+  padding-left: 25px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #E3B873;
 }
 
 /*-- Footer --*/
