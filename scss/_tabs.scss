@@ -80,6 +80,19 @@
           }
         }
       }
+
+      a.active {
+        color: #E3B873;
+
+        &:after {
+          display: block;
+          position: absolute;
+          content: '';
+          width: 99%;
+          height: 1px;
+          background-color: #E3B873;
+        }
+      }
     }
   }
 
@@ -161,8 +174,6 @@
     width: 100%;
     height: 482px;
     align-items: center;
-    //padding-left: 40px;
-    //box-sizing: border-box;
     overflow: hidden;
     position: relative;
 

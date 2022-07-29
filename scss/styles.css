@@ -502,6 +502,17 @@ a:hover, a:focus, a:visited {
   height: 1px;
   background-color: #E3B873;
 }
+.tabs__list li a.active {
+  color: #E3B873;
+}
+.tabs__list li a.active:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 99%;
+  height: 1px;
+  background-color: #E3B873;
+}
 .tabs__grid {
   display: grid;
   justify-content: stretch;
@@ -1416,6 +1427,12 @@ a:hover, a:focus, a:visited {
   background-size: cover;
   margin-bottom: 110px;
 }
+@media screen and (max-width: 660px) {
+  .examples {
+    background-image: none;
+    background-color: #FFFFFF;
+  }
+}
 .examples__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -1434,6 +1451,94 @@ a:hover, a:focus, a:visited {
   box-sizing: border-box;
   width: 50%;
 }
+.examples__list .tabs__slider {
+  display: none;
+}
+@media screen and (max-width: 660px) {
+  .examples__list .tabs__slider {
+    display: flex;
+  }
+}
+@media screen and (max-width: 660px) {
+  .examples__list {
+    width: 100%;
+    padding: 0;
+  }
+}
+.examples__title {
+  margin-top: 0;
+  font-family: "Yeseva One", cursive;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #E3B873;
+  width: 100%;
+}
+@media screen and (max-width: 660px) {
+  .examples__title {
+    text-align: center;
+  }
+}
+.examples__types {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 660px) {
+  .examples__types {
+    display: none;
+  }
+}
+.examples__types li {
+  margin-bottom: 25px;
+}
+.examples__types li a {
+  position: relative;
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #FFFFFF;
+  transition: 0.4s all;
+}
+.examples__types li a:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 1px;
+  bottom: -6px;
+  background-color: #E3B873;
+  transition: 0.4s all;
+}
+.examples__types li a:hover {
+  color: #E3B873;
+}
+.examples__types li a:hover:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 99%;
+  height: 1px;
+  background-color: #E3B873;
+}
+.examples__types li a.active {
+  color: #E3B873;
+}
+.examples__types li a.active:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 99%;
+  height: 1px;
+  background-color: #E3B873;
+}
 .examples__slider {
   width: 50%;
   display: grid;
@@ -1443,6 +1548,11 @@ a:hover, a:focus, a:visited {
   grid-auto-flow: dense;
   margin-top: -40px;
   margin-bottom: -40px;
+}
+@media screen and (max-width: 660px) {
+  .examples__slider {
+    display: none;
+  }
 }
 .examples__slider--big {
   grid-row: span 2;

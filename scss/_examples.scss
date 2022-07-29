@@ -11,6 +11,12 @@
   background-size: cover;
   margin-bottom: 110px;
 
+
+  @media screen and (max-width: 660px) {
+    background-image: none;
+    background-color: #FFFFFF;
+  }
+
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -29,6 +35,100 @@
     padding-left: 99px;
     box-sizing: border-box;
     width: 50%;
+
+    .tabs__slider {
+      display: none;
+
+      @media screen and (max-width: 660px) {
+        display: flex;
+      }
+    }
+
+    @media screen and (max-width: 660px) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    font-family: $Yeseva;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #E3B873;
+    width: 100%;
+
+    @media screen and (max-width: 660px) {
+      text-align: center;
+    }
+  }
+
+  &__types {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @media screen and (max-width: 660px) {
+      display: none;
+    }
+
+    li {
+      margin-bottom: 25px;
+
+      a {
+        position: relative;
+        font-family: $Nunito;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        color: #FFFFFF;
+        transition: 0.4s all;
+
+        &:after {
+          display: block;
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 1px;
+          bottom: -6px;
+          background-color: #E3B873;
+          transition: 0.4s all;
+        }
+
+        &:hover {
+          color: #E3B873;
+
+          &:after {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 99%;
+            height: 1px;
+            background-color: #E3B873;
+          }
+        }
+      }
+
+      a.active {
+        color: #E3B873;
+
+        &:after {
+          display: block;
+          position: absolute;
+          content: '';
+          width: 99%;
+          height: 1px;
+          background-color: #E3B873;
+        }
+      }
+    }
   }
 
   &__slider {
@@ -40,6 +140,10 @@
     grid-auto-flow: dense;
     margin-top: -40px;
     margin-bottom: -40px;
+
+    @media screen and (max-width: 660px) {
+      display: none;
+    }
 
     &--big {
       grid-row: span 2;
