@@ -278,7 +278,6 @@ a:hover, a:focus, a:visited {
   }
 }
 
-/*-- Header close --*/
 /*-- Main banner--*/
 .banner {
   display: flex;
@@ -422,7 +421,6 @@ a:hover, a:focus, a:visited {
   }
 }
 
-/*-- Main banner close --*/
 /*-- Tabs --*/
 .tabs {
   display: flex;
@@ -719,7 +717,6 @@ a:hover, a:focus, a:visited {
   border-radius: 0;
 }
 
-/*-- Tabs close --*/
 /*-- Control --*/
 .control {
   display: flex;
@@ -1022,7 +1019,6 @@ a:hover, a:focus, a:visited {
   opacity: 1;
 }
 
-/*-- Control close*/
 /*-- Types --*/
 .types {
   display: flex;
@@ -1145,7 +1141,102 @@ a:hover, a:focus, a:visited {
   }
 }
 
-/*-- Types close --*/
+/*-- Request --*/
+.request {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  padding-top: 230px;
+  padding-bottom: 102px;
+  box-sizing: border-box;
+}
+.request__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 645px;
+  background-image: url("../images/req_bg.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.request__list ol {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  list-style-type: none;
+  counter-reset: num;
+  margin: 0;
+  padding-left: 30%;
+  box-sizing: border-box;
+}
+.request__list ol li {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.request__count {
+  display: block;
+  position: relative;
+  float: left;
+  width: 42px;
+  height: 42px;
+  background-color: #E3B873;
+  border: 7px solid #FFFFFF;
+  border-radius: 50%;
+  overflow: hidden;
+  font-family: "Yeseva One", cursive;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 42px;
+  text-align: center;
+  color: #FFFFFF;
+  box-shadow: 0 5px 15px rgba(227, 184, 115, 0.15);
+}
+.request__descr {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #363636;
+  width: calc(100% - 66px);
+}
+.request__blank {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  float: left;
+  position: relative;
+}
+.request__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 509px;
+  height: 509px;
+  padding: 28px 49px;
+  box-sizing: border-box;
+  background: #131313;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+}
+
 /*-- Footer --*/
 .footer {
   display: flex;
