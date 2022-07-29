@@ -9,6 +9,10 @@
   padding-bottom: 102px;
   box-sizing: border-box;
 
+  @media screen and (max-width: 660px) {
+    display: none;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -21,6 +25,10 @@
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
+
+    @media screen and (max-width: 1024px) {
+     display: none;
+    }
 
     ol {
       display: flex;
@@ -79,23 +87,142 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 50%;
     float: left;
     position: relative;
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
   }
 
   &__form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: flex-end;
     width: 509px;
     height: 509px;
     padding: 28px 49px;
     box-sizing: border-box;
     background: #131313;
     box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+
+    &-title {
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 39px;
+      font-family: $Nunito;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+
+  &__element {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 48px;
+
+    &:nth-of-type(3), &:nth-of-type(4) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-family: $Nunito;
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+
+    &--checkbox {
+      display: block;
+      position: relative;
+      width: 100%;
+      font-family: $Nunito;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      color: #FFFFFF;
+      padding-left: 27px;
+      box-sizing: border-box;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #E3B873;
+        background-color: transparent;
+        transition: all 0.4s;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #E3B873;
+        background-color: #E3B873;
+        background-image: url('../images/icons/checked_icon.svg');
+        background-repeat: no-repeat;
+        -webkit-background-size: 13px 9px;
+        background-size: 13px 9px;
+        background-position: center center;
+        opacity: 0;
+        transition: all 0.4s;
+      }
+    }
+  }
+
+  &__text {
+    padding: 8px 0;
+    border: none;
+    color: #FFFFFF;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    outline: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: white;
+    }
+  }
+
+
+  &__checkbox:checked,
+  &__checkbox:not(:checked) {
+    display: none;
+  }
+
+  &__checkbox:checked + .request__label--checkbox:before {
+    background-color: #E3B873;
+  }
+
+  &__checkbox:checked + .request__label--checkbox:after {
+    opacity: 1;
   }
 }

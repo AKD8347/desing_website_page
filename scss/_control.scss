@@ -292,7 +292,16 @@
       color: #FFFFFF;
       background-color: transparent;
       border-bottom: 1px solid #fff;
+
+      &::-webkit-input-placeholder {
+        color: white;
+      }
     }
+
+    &:focus {
+      outline: none;
+    }
+
   }
 
   &__checkbox:checked, &__checkbox:not(:checked) {
