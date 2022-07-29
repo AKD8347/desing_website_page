@@ -144,6 +144,17 @@ $Yeseva: 'Yeseva One', cursive;
   }
 }
 
+.subtitle {
+  font-family: $Nunito;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  text-align: center;
+  color: #363636;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .line {
   display: block;
   position: relative;
@@ -164,8 +175,10 @@ $Yeseva: 'Yeseva One', cursive;
 @import "types";
 /*-- Request --*/
 @import "request";
-/*-- Examples --*/
+/*--Examples --*/
 @import "examples";
+/*-- Clients --*/
+@import "clients";
 /*-- Footer --*/
 @import "footer";
 /*-- Footer close --*/
