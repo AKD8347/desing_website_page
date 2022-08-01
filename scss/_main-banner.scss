@@ -114,6 +114,7 @@
     &--btn {
       padding: 19px 41px;
       margin-right: 20px;
+      font-style: normal;
 
       @media screen and (max-width: 660px) {
         width: 100%;
@@ -121,9 +122,9 @@
       }
 
       &:hover {
-        color: #FFFFFF;
+        color: #E3B873;
         background-color: transparent;
-        border: 1px solid #FFFFFF;
+        border: 1px solid #E3B873;
       }
     }
 

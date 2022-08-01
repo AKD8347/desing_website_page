@@ -1,0 +1,129 @@
+.map {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.97);
+  padding-top: 246px;
+
+  @media screen and (max-width: 660px) {
+    padding-top: 0;
+  }
+
+  &:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('../images/map_bg.png');
+    opacity: 0.3;
+    background-size: cover;
+  }
+
+  .container {
+    justify-content: center;
+  }
+
+  &__title {
+    display: flex;
+    margin-top: 52px;
+    margin-bottom: 26px;
+    font-family: $Yeseva;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #E3B873;
+
+    @media screen and (max-width: 660px) {
+      order: 2;
+      margin-top: 0;
+      margin-bottom: 23px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+    @media screen and (max-width: 660px) {
+      order: 3;
+      margin-bottom: 23px;
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-color: #E3B873;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 8px;
+    margin-right: 8px;
+    border: 1px solid #E3B873;
+    transition: 0.4s all;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid #fff;
+    }
+
+    &--mail {
+      background-image: url('../images/icons/mail_icon.svg');
+      background-repeat: no-repeat;
+      -webkit-background-size: 18px 14px;
+      background-size: 18px 14px;
+      background-position: 5px 7px;
+    }
+
+    &--inst {
+      background-image: url('../images/icons/inst_icon.svg');
+      background-repeat: no-repeat;
+      -webkit-background-size: 18px 18px;
+      background-size: 18px 18px;
+      background-position: 5px 5px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    position: relative;
+    width: 803px;
+    height: 388px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    overflow: hidden;
+
+    @media screen and (max-width: 660px) {
+      order: 1;
+      width: 100%;
+      height: 255px;
+      margin-bottom: 42px;
+    }
+  }
+
+  &__element {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/map.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+  }
+}
