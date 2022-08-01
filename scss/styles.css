@@ -1767,6 +1767,28 @@ a:hover, a:focus, a:visited {
   background-position: center center;
 }
 
+/*-- Questions --*/
+.questions {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.questions .container {
+  justify-content: center;
+}
+.questions__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 883px;
+  background-color: #181818;
+  padding: 34px;
+  box-sizing: border-box;
+}
+
 /*-- Footer --*/
 .footer {
   display: flex;
